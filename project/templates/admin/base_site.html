@@ -1,0 +1,31 @@
+{% extends "admin/base.html" %}
+
+{% block title %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
+
+{% block extrastyle %}
+<style type="text/css">
+	#header{
+		background: #0ca3d2;
+	}
+	  
+	.button, input[type=submit], input[type=button], .submit-row input, a.button {
+    background: #0ca3d2;
+    
+}
+.module caption, .inline-group h2 {
+    
+    background: #0ca3d2;
+   
+}
+div.breadcrumbs {
+    background: #0ca3d2;
+    
+}
+</style>
+{% endblock %}
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}">
+{{ site_header|default:_('Django administration') }}</a></h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
